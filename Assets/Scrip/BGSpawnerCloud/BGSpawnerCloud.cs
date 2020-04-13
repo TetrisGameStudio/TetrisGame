@@ -15,8 +15,8 @@ public class BGSpawnerCloud : MonoBehaviour
     IEnumerator Spawner() //Deplay để sinh ra
     {
         yield return new WaitForSeconds(15);
-        //Vector3 temp = cloud.transform.position;
-        //temp.y = Random.Range(-2.5f, 2.5f);
+        Vector3 temp = cloud.transform.position;
+        temp.y = Random.Range(-2.5f, 2.5f);
         Instantiate(cloud,transform.position, Quaternion.identity);
         StartCoroutine (Spawner());
     }
